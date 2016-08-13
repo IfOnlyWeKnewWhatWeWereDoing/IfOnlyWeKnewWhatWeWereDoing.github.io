@@ -9,7 +9,7 @@ navpriority: 1
 
   <ul class="w3-ul w3-hoverable">
     {% for project in site.data.projects %}
-      {% if project.page %}<a style="text-decoration: none; color: inherit;" href="{{ project.page | prepend: site.github.url }}">{% endif %}
+      {% if project.page %}<a style="text-decoration: none; color: inherit;" href="{{ site.github.url }}/{{ project.page }}">{% endif %}
       {% if project.page %}<li>{% else %}<li class="w3-hover-red">{% endif %}
         <div class="w3-container w3-row-padding">
           <div class="w3-container w3-col l3 m3 s6">
