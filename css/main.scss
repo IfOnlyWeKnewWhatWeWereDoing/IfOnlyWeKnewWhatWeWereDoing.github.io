@@ -1,0 +1,30 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Font Variables
+$normal-text-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$normal-text-font-size: 16px;
+$normal-text-font-color: #111;
+
+$title-text-font-size: 3 * $normal-text-font-size;
+$title-text-font-color: #fff;
+
+$subtitle-text-font-size: 2 * $normal-text-font-size;
+$subtitle-text-font-color: #fff;
+
+// Background Variables
+$default-background-color: #fdfdfd;
+
+// Sizing Variables
+$spacing-unit: 30px;
+$max-mobile-width: 800px;
+$header-height: 64px;
+$content-heading-size: 28px;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout"
+;

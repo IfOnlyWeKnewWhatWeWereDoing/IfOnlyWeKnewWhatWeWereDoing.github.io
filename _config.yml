@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: If Only We Knew What We Were Doing
+email: andrew8887888@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Magically not dying yet.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+github_username:  roseaw
+shortened_title: IOWKWWWD
+
+# Build settings
+markdown: kramdown

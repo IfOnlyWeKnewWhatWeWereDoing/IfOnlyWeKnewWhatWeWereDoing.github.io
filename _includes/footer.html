@@ -1,0 +1,14 @@
+<footer class="w3-container w3-aqua">
+
+  <h2>{{ site.shortened_title }}</h2>
+
+  <div>
+    Creators: {% for m in site.data.members %}<a href="{{site.github.url}}/members.html#{{m.name}}">{{m.name}}</a> {% endfor %}
+    <br>
+    Contact: <a href="mailto:IfOnlyWeKnewWhatWeWhereDoing@gmail.com">IfOnlyWeKnewWhatWeWhereDoing@gmail.com</a>
+  </div>
+
+  <br>
+  <p>Site maintained by Andrew (<a href="https://github.com/roseaw">roseaw</a>)</p>
+
+</footer>

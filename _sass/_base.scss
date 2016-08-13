@@ -1,0 +1,30 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: $normal-text-font-family;
+  color: $normal-text-font-color;
+  background-color: $default-background-color;
+}
+
+.title {
+  font-size: $title-text-font-size;
+  font-weight: 900;
+  color: $title-text-font-color;
+}
+
+.subtitle {
+  font-size: $subtitle-text-font-size;
+  color: $subtitle-text-font-color;
+}
+
+h1, h2, h3, h4, h5, h6, .title, .subtitle, p {
+  margin-bottom: $spacing-unit / 2;
+}

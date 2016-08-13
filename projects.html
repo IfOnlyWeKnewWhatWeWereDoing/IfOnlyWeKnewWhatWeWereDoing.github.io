@@ -1,0 +1,37 @@
+---
+layout: default
+title: Projects
+navlink: Projects
+navpriority: 1
+---
+
+<div class="w3-container" style="margin-right: 50px; margin-left:50px; margin-top: 50px; margin-bottom: 50px;">
+
+  <ul class="w3-ul w3-hoverable">
+    {% for project in site.data.projects %}
+      {% if project.page %}<a style="text-decoration: none; color: inherit;" href="{{ project.page | prepend: site.github.url }}">{% endif %}
+      {% if project.page %}<li>{% else %}<li class="w3-hover-red">{% endif %}
+        <div class="w3-container w3-row-padding">
+          <div class="w3-container w3-col l3 m3 s6">
+            <img style="max-width: 128px" src={% if project.image %}"{{ site.github.url }}/Data/Media/Images/{{project.image}}"{% else %}"{{ site.github.url }}/Data/Media/Images/Missing.svg"{% endif %}/>
+          </div>
+          <div class="w3-container w3-col l6 m6 s6">
+            <div class="w3-container w3-hide-small">
+              <h1>{{project.name}}</h1>
+              <div>Participants: {{project.members}}</div>
+              <div>{{project.desc}}</div>
+            </div>
+            <div class="w3-container w3-hide-large w3-hide-medium">
+              <h2>{{project.name}}</h2>
+            </div>
+          </div>
+          <div class="w3-container w3-col l3 m3 w3-hide-small">
+            <div>{{project.start_date}} to {% if project.end_date %}{{project.end_date}}{%else%}Present{% endif %}</div>
+          </div>
+        </div>
+      </li>
+      {% if project.page %}</a>{% endif %}
+    {% endfor %}
+  </ul>
+
+</div>

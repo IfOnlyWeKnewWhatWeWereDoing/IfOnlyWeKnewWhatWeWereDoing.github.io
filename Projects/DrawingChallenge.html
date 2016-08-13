@@ -1,0 +1,15 @@
+---
+layout: default
+title: Drawing Challenge
+---
+
+<div class="w3-container" style="margin-right: 50px; margin-left:50px; margin-top: 50px; margin-bottom: 50px;">
+
+  {% for post in site.categories.DrawingChallenge %}
+    <a style="text-decoration: none;" href="{{ post.url | prepend: site.github.url }}">
+      <h1 class="w3-text-teal">{{ post.date | date_to_long_string }}: {{ post.title}}</h1>
+    </a>
+    {{ post.content }}
+  {% endfor %}
+
+</div>

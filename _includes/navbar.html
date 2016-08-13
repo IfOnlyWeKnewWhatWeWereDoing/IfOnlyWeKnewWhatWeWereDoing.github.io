@@ -1,0 +1,30 @@
+<nav>
+  <ul class="w3-navbar w3-small w3-black w3-hide-small">
+    {% assign sortedpages = site.pages | sort: 'navpriority' %}
+    {% for my_page in sortedpages %}
+      {% if my_page.navlink %}
+        <li class="w3-hide-small">
+          <a href="{{ my_page.url | prepend: site.github.url }}">
+            {% if my_page.navlink %}{{ my_page.navlink | escape }}{% else %}{{ my_page.title | escape }}{% endif %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="w3-navbar w3-large w3-hide-medium w3-hide-large w3-opennav">
+    <li class="w3-dropdown-hover">
+      <a class="w3-black" href="#">☰</a>
+      <div class="w3-dropdown-content w3-black w3-card-4">
+        {% assign sortedpages = site.pages | sort: 'navpriority' %}
+        {% for my_page in sortedpages %}
+          {% if my_page.navlink %}
+            <a href="{{ my_page.url | prepend: site.github.url }}">
+              {% if my_page.navlink %}{{ my_page.navlink | escape }}{% else %}{{ my_page.title | escape }}{% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+  </ul>
+</nav>
