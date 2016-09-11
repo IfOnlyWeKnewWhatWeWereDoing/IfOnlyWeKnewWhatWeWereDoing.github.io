@@ -5,6 +5,13 @@ title: Drawing Challenge
 
 <div class="w3-container" style="margin-right: 50px; margin-left:50px; margin-top: 50px; margin-bottom: 50px;">
 
+  <h1 class="w3-text-teal w3-center">Overview</h1>
+  <p class="w3-xlarge">
+    For this project FabulousWaffles and Andrew will be drawing a new sketch every week of an
+    agreed upon prompt and releasing a colored version of the previous weeks sketch. Prompts
+    will be generated at random and the authors are free to interpret it in any way they choose.
+  </p>
+
   {% for post in site.categories.DrawingChallenge %}
     <a style="text-decoration: none;" href="{{ post.url | prepend: site.github.url }}">
       <h1 class="w3-text-teal">{{ post.date | date_to_long_string }}: {{ post.title}}</h1>
